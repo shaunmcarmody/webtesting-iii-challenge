@@ -19,15 +19,13 @@ describe('<Display />', () => {
     render(<Display />)
   });
 
-  it('renders unlocked/lock button', () => {
+  it('renders default unlocked display', () => {
     const { getByText } = render(<Display />);
     getByText(/unlocked/i);
-    // getByText('Locked'); // case sensitive to prevent match with unlocked;
   });
 
-  it('renders open/close button', () => {
+  it('renders default open display', () => {
     const { getByText } = render(<Display />);
-    // getByText(/close/i);
     getByText(/open/i);
   });
 });

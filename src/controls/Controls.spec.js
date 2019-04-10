@@ -9,7 +9,7 @@ afterEach(() => {
   // console.log(document.body.outerHTML);
 });
 
-describe.skip('<Controls />', () => {
+describe('<Controls />', () => {
   it.skip('matches snapshot', () => {
     const tree = renderer.create(<Controls />).toJSON();
     expect(tree).toMatchSnapshot();
@@ -19,15 +19,13 @@ describe.skip('<Controls />', () => {
     render(<Controls />)
   });
 
-  it('renders lock button', () => {
+  it('renders default lock gate button', () => {
     const { getByText } = render(<Controls />);
-    // getByText(/unlock gate/i);
     getByText(/lock gate/i);
   });
 
-  it('renders close button', () => {
+  it('renders default close gate button', () => {
     const { getByText } = render(<Controls />);
-    // getByText(/unlock gate/i);
     getByText(/close gate/i);
   });
 });
